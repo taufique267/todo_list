@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: #efebe0;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: rgb(251, 79, 251);
+        }
+
+        .todo {
+            width: 400px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgb(251, 79, 251);
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        #test {
+            border-radius: 5px;
+            width: 200px;
+            height: 30px;
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        #test:hover {
+            border: 2px solid rgb(251, 79, 251);
+            box-shadow: 0px 0px 5px 1px rgb(251, 79, 251);
+        }
+
+        #test {
+            cursor: pointer;
+            caret-color: rgb(251, 79, 251);
+            font-size: larger;
+        }
+
+        button {
+            margin-left: 30px;
+            height: 32px;
+            width: 70px;
+            border-radius: 5px;
+            background-color: #f3b9df;
+            border: none;
+        }
+
+        .todo:hover {
+            box-shadow: 0px 0px 10px 5px rgb(251, 79, 251);
+        }
+
+        button:hover {
+            background-color: #f7e3d9;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            width: 400px;
+            padding: 10px;
+            border: 2px solid rgb(251, 79, 251);
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 5px 2px rgb(251, 79, 251);
+        }
+
+        .task-text {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .todo-item .btn-group {
+            display: flex;
+        }
+
+        .todo-item button {
+            margin-left: 10px;
+            background-color: #f3b9df;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .todo-item button:hover {
+            background-color: #f7e3d9;
+        }
+    </style>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h1>Todo List</h1>
+    <div class="todo">
+        <input type="text" name="Enter data" id="test">
+        <button onclick="addItem()">Create</button>
+    </div>
+    <div id="todo-list"></div>
+</body>
+
+</html>
